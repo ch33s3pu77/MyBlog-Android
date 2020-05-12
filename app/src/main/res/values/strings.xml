@@ -14,4 +14,8 @@
     <string name="terms">I accept Terms &amp; Conditions</string>
     <string name="signup">Sign Up</string>
     <string name="conditions">Terms &amp; Conditions</string>
+    <string name="titleId">ID:</string>
+    <string name="titleName">Name:</string>
+    <string name="titleEmail">email:</string>
+    <string name="titleDateCreated">Date Created:</string>
 </resources>
