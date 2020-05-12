@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.demo.myblog.R;
+import com.demo.myblog.storage.SharedPrefManager;
 import com.demo.myblog.volley.VolleySingleton;
 
 import org.json.JSONException;
@@ -37,9 +38,12 @@ public class UserProfile extends AppCompatActivity {
         mName = findViewById(R.id.txt_Name);
         mEmail = findViewById(R.id.txt_email);
         mDateCreated = findViewById(R.id.txt_DateCreated);
+        SharedPrefManager sharedPrefManager = new SharedPrefManager();
+        EMAIL = sharedPrefManager.getEmail(mContext);
         appURL = "http://192.168.247.100/api/getUserDetails.php?email=" + EMAIL;
-        Intent data = getIntent();
-        EMAIL = data.getStringExtra("email");
+        //Intent data = getIntent();
+        //EMAIL = data.getStringExtra("email");
+        getUserDetails();
     }
 
     public void getUserDetails(){
